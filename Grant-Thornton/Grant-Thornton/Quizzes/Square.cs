@@ -9,6 +9,11 @@ public class Square
         var opposite = 0;
         var amount = 0;
         var result = "";
+
+        if (IsOdd(n) == false)
+        {
+            return "";
+        }
         
         for (var i = 0; i < n; i++)
         {
@@ -33,6 +38,13 @@ public class Square
         return result;
     }
 
+    public bool IsOdd(int number)
+    {
+        if (number % 2 == 1)
+            return true;
+        return false;
+    }
+    
     public string CurrentRow(int amountOfSpaces, int amountOfSigns)
     {
         var result = "";
