@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Grant-Thornton.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c24bc751897430dcaa51458b596fed51aa14c30")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9641f889eb82f9a94e97b8676d5c0b96c15e3a02")]
 [assembly: System.Reflection.AssemblyProductAttribute("Grant-Thornton.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Grant-Thornton.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
