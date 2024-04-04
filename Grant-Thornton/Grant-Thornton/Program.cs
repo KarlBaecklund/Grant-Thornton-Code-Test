@@ -4,19 +4,20 @@ using Grant_Thornton.Quizzes;
 
 namespace Grant_Thornton;
 
-internal class Program
+internal abstract class Program
 {
     public static async Task Main(string[] args)
     { 
-        var fibonacci = new Fibonacci(); // OK
+        var fibonacci = new Fibonacci(); 
             
-        var square = new Square(); // OK
+        var square = new Square(); 
             
         int[] arr = { 64, 34, 25, 12, 22, 11, 90 };
-        var bubbleSort = new BubbleSort(); //OK
+        var bubbleSort = new BubbleSort(); 
             
-        var palindrome = new Palindrome(); //OK
-        //var respond = palindrome.GetRespond("DRuQSdrjDG_syswkTpRhz2l0wt_tDoOmFTGLhCCni_MDAzFuYF6Bkg==");
+        var palindrome = new Palindrome(); 
+        var respond = await palindrome.GetRespond("DRuQSdrjDG_syswkTpRhz2l0wt_tDoOmFTGLhCCni_MDAzFuYF6Bkg==");
+        
         Console.WriteLine(fibonacci.GetValueOfFibonacciNumber(5));
     } 
 }

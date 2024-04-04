@@ -6,16 +6,20 @@ public class Palindrome
     public async Task<string> GetPalindrome(string query)
     {
         var result = "";
-        // var baseUrl = "https://gt-code-test.azurewebsites.net/api/get/Karl?code=DRuQSdrjDG_syswkTpRhz2l0wt_tDoOmFTGLhCCni_MDAzFuYF6Bkg==";
-        // var client = new HttpClient();
+        
         var response = await GetRespond(query);
         if (!response.IsSuccessStatusCode)
         {
             throw new InvalidOperationException($"got response code: {response.StatusCode}");
         }
-        // Read the content asynchronously and display it
+        
         var content = await response.Content.ReadAsStringAsync();
-        string[] values = JsonConvert.DeserializeObject<string[]>(content);
+        string[] values = JsonConvert.DeserializeObject<string[]>(content) ?? [];
+
+        if (values == null)
+        {
+            throw new InvalidOperationException($"got null values");
+        }
         
         foreach (var word in values)
         {
