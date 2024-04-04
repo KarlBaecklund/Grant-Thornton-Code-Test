@@ -6,12 +6,12 @@ public class BubbleSort
     public string BubbleRespond(int[] arr)
     {
         var n = arr.Length;
-        Sort(arr, n);
-        return printArray(arr, n);
+        arr = Sort(arr, n);
+        return PrintArray(arr, n);
     }
     
     // Function to print an array
-    static string printArray(int[] arr, int size)
+    public string PrintArray(int[] arr, int size)
     {
         var result = "";
         for (var i = 0; i < size; i++)
@@ -21,7 +21,7 @@ public class BubbleSort
     }
     
     // An optimized version of Bubble Sort
-    static void Sort(int[] arr, int n)
+    public int[] Sort(int[] arr, int n)
     {
         int temp;
         bool swapped;
@@ -42,5 +42,7 @@ public class BubbleSort
             if (swapped == false)
                 break;
         }
+
+        return arr;
     }
 }
