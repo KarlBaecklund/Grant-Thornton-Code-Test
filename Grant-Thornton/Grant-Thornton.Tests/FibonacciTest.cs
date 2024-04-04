@@ -1,3 +1,4 @@
+using System;
 using Grant_Thornton.Quizzes;
 using JetBrains.Annotations;
 using Xunit;
@@ -5,19 +6,12 @@ using Xunit;
 namespace Grant_Thornton.Tests;
 
 [TestSubject(typeof(Fibonacci))]
-public class FibonacciTest : IClassFixture<Fibonacci>
+public class FibonacciTest(Fibonacci fibonacci) : IClassFixture<Fibonacci>
 {
-    private readonly Fibonacci _fibonacci;
-
-    public FibonacciTest(Fibonacci fibonacci)
-    {
-        _fibonacci = fibonacci;
-    }
-    
     [Fact]
-    public void IfEqual()
+    public void should_return_zero_if_input_zero()
     {
-        var result = _fibonacci.GetValueOfFibonacciNumber(5);
-        Assert.Equal(3, result);
+        var result = fibonacci.GetValueOfFibonacciNumber(0);
+        Assert.Equal(0, result);
     }
 }
