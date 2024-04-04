@@ -15,8 +15,8 @@ internal class Program
         int[] arr = { 64, 34, 25, 12, 22, 11, 90 };
         var bubbleSort = new BubbleSort(); //OK
             
-        var palindrome = new Palindrome();
-        
+        var palindrome = new Palindrome(); //OK
+        //var respond = palindrome.GetRespond("DRuQSdrjDG_syswkTpRhz2l0wt_tDoOmFTGLhCCni_MDAzFuYF6Bkg==");
         Console.WriteLine(fibonacci.GetValueOfFibonacciNumber(5));
     } 
 }
