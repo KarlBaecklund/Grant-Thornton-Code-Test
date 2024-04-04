@@ -19,7 +19,7 @@ public class Palindrome
         
             foreach (var word in values)
             {
-                result += word + " " + GetStatus(word.ToLower()) + "\n";
+                result += word + " " + GetStatus(word) + "\n";
             }
         }
         else
@@ -29,8 +29,9 @@ public class Palindrome
 
         return result;
     }
-    public static bool GetStatus(string myString)
+    public bool GetStatus(string myString)
     {
+        myString = myString.ToLower();
         var first = myString.Substring(0, myString.Length / 2);
         var arr   = myString.ToCharArray();
 
